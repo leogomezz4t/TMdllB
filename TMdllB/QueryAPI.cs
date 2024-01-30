@@ -1,6 +1,6 @@
 ﻿namespace TMdllB
 {
-    public static class QueryAPI
+    internal static class QueryAPI
     {
         // **** Properties
 
