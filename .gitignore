@@ -4,3 +4,6 @@ obj/
 Build/
 
 API_KEY
+
+# Playground will hold random strings, could be dangerous
+TestingTMdllB/Playground.cs
