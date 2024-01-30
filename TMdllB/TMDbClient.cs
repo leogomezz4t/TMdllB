@@ -13,6 +13,10 @@ namespace TMdllB
         }
 
         // **** Class Constants
+        private static string IMAGE_BASE_URL = "https://image.tmdb.org/t/p";
+        private static string IMAGE_ORIGINAL_SIZE_ENDPOINT = "/original";
+        private static string IMAGE_W500_SIZE_ENDPOINT = "/w500";
+
         private static string API_BASE_URL = "https://api.themoviedb.org/3";
         private static string API_SEARCH = "/search";
         private static string API_MOVIES = "/movie";
