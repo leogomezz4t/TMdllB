@@ -7,6 +7,7 @@ namespace TMdllB
         /*
          * A list of type MovieResult that represents the results returned
          */
-        [JsonPropertyName()]
+        [JsonPropertyName("results")]
+        public List<MovieResult> Results { get; set; }
     }
 }
