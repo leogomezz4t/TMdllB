@@ -5,7 +5,7 @@ namespace TMdllB
     /*
      * The MovieResult class represents an object in the 'results' array returned when using the /search/movie endpoint in the TMDB API
      */
-    public class MovieResult
+    internal class MovieResult
     {
         /*
          * A boolean representing whether this result is an adult film

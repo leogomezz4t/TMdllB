@@ -2,7 +2,7 @@
 
 namespace TMdllB
 {
-    public static class QueryParser
+    internal static class QueryParser
     {
         // **** Static Properties
         private static readonly JsonSerializerOptions _serializeOptions = new JsonSerializerOptions()

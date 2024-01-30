@@ -2,7 +2,7 @@
 
 namespace TMdllB
 {
-    public class ResultContainer
+    internal class ResultContainer
     {
         /*
          * An integer representing the current page
