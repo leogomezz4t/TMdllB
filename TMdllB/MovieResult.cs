@@ -65,7 +65,7 @@ namespace TMdllB
          * The date this movie was released
          */
         [JsonPropertyName("release_date")]
-        public DateOnly ReleaseData { get; set; }
+        public DateOnly ReleaseDate { get; set; }
 
         /*
          * The title of the movie
