@@ -2,7 +2,7 @@
 
 namespace TMdllB
 {
-    public class MovieContainer
+    public class ResultContainer
     {
         /*
          * An integer representing the current page
@@ -21,11 +21,5 @@ namespace TMdllB
          */
         [JsonPropertyName("total_results")]
         public int TotalResults { get; set; }
-
-        /*
-         * List of MovieResult that represent the results returned
-         */
-        [JsonPropertyName("results")]
-        public List<MovieResult> Results { get; set; }
     }
 }
