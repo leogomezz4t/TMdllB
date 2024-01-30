@@ -23,7 +23,7 @@ namespace TMdllB
         private string API_KEY;
 
         // **** Methods
-        public async Task<MovieResultContainer> SearchMovies(string query)
+        public async Task<List<Movie>> SearchMovies(string query)
         {
             // Url Encode the get params
             string encodedQuery = HttpUtility.UrlEncode(query);
@@ -31,11 +31,12 @@ namespace TMdllB
             string url = $"{API_BASE_URL}{API_SEARCH}{API_MOVIES}?api_key={API_KEY}&query={encodedQuery}";
             // Get string result from the url
             string jsonResult = await QueryAPI.GetString(url);
-            // ------ TODO Make sure the result is succesful
             // Serialize the jsonResult
             MovieResultContainer container = QueryParser.ParseMovieResults(jsonResult);
+            // Convert all results to a Movie
+            List<Movie> movies = container.Results.Select(x => new Movie(x, this)).ToList();
 
-            return container;
+            return movies;
         }
     }
 }
