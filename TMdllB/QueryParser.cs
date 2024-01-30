@@ -10,9 +10,9 @@ namespace TMdllB
             PropertyNameCaseInsensitive = true
         };
 
-        public static MovieContainer ParseMovieResults(string json)
+        public static MovieResultContainer ParseMovieResults(string json)
         {
-            MovieContainer mc = JsonSerializer.Deserialize<MovieContainer>(json, _serializeOptions);
+            MovieResultContainer mc = JsonSerializer.Deserialize<MovieResultContainer>(json, _serializeOptions);
 
             return mc;
         }
