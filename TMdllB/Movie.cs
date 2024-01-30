@@ -24,12 +24,12 @@
             Id = _searchResult.Id;
             IsAdult = _searchResult.IsAdult;
             GenreIds = _searchResult.GenreIds;
-            BackdropPath = _searchResult.BackdropPath;
+            RelativeBackdropPath = _searchResult.BackdropPath;
             OriginalLanguage = _searchResult.OriginalLanguage;
             OriginalTitle = _searchResult.OriginalTitle;
             Overview = _searchResult.Overview;
             Popularity = _searchResult.Popularity;
-            PosterPath = _searchResult.PosterPath;
+            RelativePosterPath = _searchResult.PosterPath;
             ReleaseDate = _searchResult.ReleaseDate;
             Title = _searchResult.Title;
             HasVideo = _searchResult.Video;
@@ -44,7 +44,13 @@
 
         public int[] GenreIds { get; }
 
-        public string BackdropPath { get; }
+        public string RelativeBackdropPath { get; }
+
+        public string BackdropPath { get
+            {
+                return $"{TMDbClient.IMAGE_BASE_URL}{TMDbClient.IMAGE_ORIGINAL_SIZE_ENDPOINT}{RelativeBackdropPath}";
+            }
+        }
 
         public string OriginalLanguage { get; }
 
@@ -54,7 +60,13 @@
 
         public float Popularity { get; }
 
-        public string PosterPath { get; }
+        public string RelativePosterPath { get; }
+
+        public string PosterPath { get
+            {
+                return $"{TMDbClient.IMAGE_BASE_URL}{TMDbClient.IMAGE_ORIGINAL_SIZE_ENDPOINT}{RelativePosterPath}";
+            }
+        }
 
         public DateOnly ReleaseDate { get; }
 
