@@ -14,8 +14,8 @@
          */
         private MovieResult _searchResult { get; set; }
 
-    // **** Constructor
-    public Movie(MovieResult result, TMDbClient parentClient)
+        // **** Constructor
+        public Movie(MovieResult result, TMDbClient parentClient)
         {
             _searchResult = result;
             _parentClient = parentClient;
@@ -47,7 +47,7 @@
         public string BackdropPath { get; }
 
         public string OriginalLanguage { get; }
-        
+
         public string OriginalTitle { get; }
 
         public string Overview { get; }
@@ -61,7 +61,7 @@
         public string Title { get; }
 
         public bool HasVideo { get; }
-        
+
         public float VoteAverage { get; }
 
         public int VoteCount { get; }
