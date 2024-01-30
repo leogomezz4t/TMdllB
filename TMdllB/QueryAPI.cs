@@ -24,10 +24,16 @@
         public static async Task<string> GetString(string url)
         {
             HttpResponseMessage res = await GetResponse(url);
-            // Check for no errors in the message
-            res.EnsureSuccessStatusCode();
-
             string text = await res.Content.ReadAsStringAsync();
+            // Check for no errors in the message
+            try
+            {
+                res.EnsureSuccessStatusCode();
+            } catch (HttpRequestException)
+            {
+                throw new HttpRequestException($"Content of failed request: {text}");
+            }
+
             return text;
         }
 
