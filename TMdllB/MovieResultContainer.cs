@@ -2,6 +2,9 @@
 
 namespace TMdllB
 {
+    /*
+     * MovieResultContainer represents the object returned by the TMDB API when using the /search/movie endpoint
+     */
     public class MovieResultContainer : ResultContainer
     {
         /*
