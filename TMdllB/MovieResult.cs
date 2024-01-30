@@ -71,7 +71,7 @@ namespace TMdllB
         public string Title { get; set; } = string.Empty;
 
         /*
-         * TODO Not sure what this is honestly
+         * Promotional videos such as trailers
          */
         [JsonPropertyName("video")]
         public bool Video { get; set; }
