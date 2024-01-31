@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace TMdllB
+namespace TMdllB.Movie
 {
     /*
      * The MovieResult class represents an object in the 'results' array returned when using the /search/movie endpoint in the TMDB API
@@ -47,7 +47,7 @@ namespace TMdllB
          * A brief overview of the movie
          */
         [JsonPropertyName("overview")]
-        public string Overview {  get; set; } = string.Empty;
+        public string Overview { get; set; } = string.Empty;
 
         /*
          * A popularity metric used by TMDB, more info here https://developer.themoviedb.org/docs/popularity-and-trending

@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
+using TMdllB.Movie;
 
-namespace TMdllB
+namespace TMdllB.Query
 {
     internal static class QueryParser
     {

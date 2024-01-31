@@ -1,9 +1,11 @@
 ﻿using System.Web;
+using TMdllB.Movie;
+using TMdllB.Query;
 
 namespace TMdllB
 {
     // **** Constants
-    
+
 
     public class TMDbClient
     {

@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace TMdllB
+namespace TMdllB.Movie
 {
     /*
      * MovieResultContainer represents the object returned by the TMDB API when using the /search/movie endpoint

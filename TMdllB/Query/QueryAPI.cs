@@ -1,4 +1,4 @@
-﻿namespace TMdllB
+﻿namespace TMdllB.Query
 {
     internal static class QueryAPI
     {
@@ -17,7 +17,7 @@
             HttpResponseMessage result = await _httpClient.GetAsync(url);
             return result;
         }
-         
+
         /*
          * An overload for the async GetString method that takes in a one string parameter for the url and returns the content for the response.
          */
@@ -29,7 +29,8 @@
             try
             {
                 res.EnsureSuccessStatusCode();
-            } catch (HttpRequestException)
+            }
+            catch (HttpRequestException)
             {
                 throw new HttpRequestException($"Content of failed request: {text}");
             }
@@ -47,6 +48,6 @@
             return text;
         }
 
-        
+
     }
 }
