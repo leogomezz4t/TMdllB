@@ -1,6 +1,9 @@
 # TMdllB
 #### A C# .NET wrapper for TMDB (The Movie Database) v3 API
 
+## Setup
+In order to use the TMDB API you need to get an API key. Follow the instructions [here](https://developer.themoviedb.org/docs/getting-started) to receive a key
+
 ## Documentation
 Keep in mind all functions are async and awaitable
 
