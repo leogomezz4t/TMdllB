@@ -1,6 +1,6 @@
 ﻿using System.Web;
-using TMdllB.Movie;
 using TMdllB.Query;
+using TMdllB.SearchResults;
 
 namespace TMdllB
 {

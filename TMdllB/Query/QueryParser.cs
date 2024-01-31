@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using TMdllB.Movie;
+using TMdllB.SearchResults;
 
 namespace TMdllB.Query
 {

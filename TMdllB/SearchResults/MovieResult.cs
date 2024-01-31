@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace TMdllB.Movie
+namespace TMdllB.SearchResults
 {
     /*
      * The MovieResult class represents an object in the 'results' array returned when using the /search/movie endpoint in the TMDB API

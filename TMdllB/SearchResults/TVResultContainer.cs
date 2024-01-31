@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TMdllB.TV
+namespace TMdllB.SearchResults
 {
     internal class TVResultContainer : ResultContainer
     {

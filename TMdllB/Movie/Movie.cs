@@ -1,4 +1,6 @@
-﻿namespace TMdllB.Movie
+﻿using TMdllB.SearchResults;
+
+namespace TMdllB
 {
     public class Movie
     {
