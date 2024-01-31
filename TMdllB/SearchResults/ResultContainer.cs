@@ -2,7 +2,7 @@
 
 namespace TMdllB.SearchResults
 {
-    internal class ResultContainer
+    public class ResultContainer
     {
         /*
          * An integer representing the current page

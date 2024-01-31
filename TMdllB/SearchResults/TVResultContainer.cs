@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TMdllB.SearchResults
 {
-    internal class TVResultContainer : ResultContainer
+    public class TVResultContainer : ResultContainer
     {
 
     }
