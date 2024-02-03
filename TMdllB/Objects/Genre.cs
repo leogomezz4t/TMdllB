@@ -5,9 +5,9 @@ namespace TMdllB.Objects
     public class Genre
     {
         [JsonPropertyName("id")]
-        public int Id { get; }
+        public int Id { get; set;  }
 
         [JsonPropertyName("name")]
-        public string? Name { get; }
+        public string? Name { get; set; }
     }
 }

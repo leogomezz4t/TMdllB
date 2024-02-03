@@ -5,10 +5,10 @@ namespace TMdllB.Objects
     public class ProductionCompany
     {
         [JsonPropertyName("id")]
-        public int Id { get; }
+        public int Id { get; set; }
 
         [JsonPropertyName("logo_path")]
-        public string? RelativeLogoPath { get; }
+        public string? RelativeLogoPath { get; set; }
 
         public string? LogoPath { get
             {
@@ -19,9 +19,9 @@ namespace TMdllB.Objects
         }
 
         [JsonPropertyName("name")]
-        public string Name { get; }
+        public string Name { get; set; }
 
         [JsonPropertyName("origin_country")]
-        public string OriginCountry { get; }
+        public string OriginCountry { get; set; }
     }
 }

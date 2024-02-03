@@ -14,7 +14,7 @@ namespace TMdllB.SearchResults
          * The relative image path to the backdrop for this movie
          */
         [JsonPropertyName("backdrop_path")]
-        public string BackdropPath { get; set; } = string.Empty;
+        public string BackdropPath { get; set; }
 
         /*
          * A list of ids that each correspond to a genre
@@ -32,14 +32,14 @@ namespace TMdllB.SearchResults
          * The original language of the movie
          */
         [JsonPropertyName("original_language")]
-        public string OriginalLanguage { get; set; } = string.Empty;
+        public string OriginalLanguage { get; set; }
 
 
         /*
          * A brief overview of the movie
          */
         [JsonPropertyName("overview")]
-        public string Overview { get; set; } = string.Empty;
+        public string Overview { get; set; }
 
         /*
          * A popularity metric used by TMDB, more info here https://developer.themoviedb.org/docs/popularity-and-trending
@@ -51,7 +51,7 @@ namespace TMdllB.SearchResults
          * The relative image path of the poster for this movie
          */
         [JsonPropertyName("poster_path")]
-        public string PosterPath { get; set; } = string.Empty;
+        public string PosterPath { get; set; }
 
         /*
          * The average votes received | Not sure of the timeframe
