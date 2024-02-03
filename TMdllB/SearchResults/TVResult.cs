@@ -2,7 +2,7 @@
 
 namespace TMdllB.SearchResults
 {
-    public class TVResult
+    public class TVResult : TVMovieBaseResult
     {
         /*
          * List of the countries the tv show originated from
