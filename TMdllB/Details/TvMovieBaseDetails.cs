@@ -15,7 +15,7 @@ namespace TMdllB.Details
             {
                 if (RelativeBackdropPath == null)
                 {
-                    return null
+                    return null;
                 }
 
                 return $"{TMDbClient.IMAGE_BASE_URL}{TMDbClient.IMAGE_ORIGINAL_SIZE_ENDPOINT}{RelativeBackdropPath}";
