@@ -13,14 +13,20 @@ namespace TMdllB.Query
 
         public static MovieResultContainer ParseMovieResults(string json)
         {
-            MovieResultContainer mc = JsonSerializer.Deserialize<MovieResultContainer>(json, _serializeOptions);
+            MovieResultContainer? mc = JsonSerializer.Deserialize<MovieResultContainer>(json, _serializeOptions);
+
+            // Check for null types
+            if (mc == null) throw new Exception($"Failed to deserialize the input: {json}");
 
             return mc;
         }
 
         public static TVResultContainer ParseTVResults(string json)
         {
-            TVResultContainer tc = JsonSerializer.Deserialize<TVResultContainer>(json, _serializeOptions);
+            TVResultContainer? tc = JsonSerializer.Deserialize<TVResultContainer>(json, _serializeOptions);
+
+            // check for null
+            if (tc == null) throw new Exception($"Failed to deserialize the input: {json}");
 
             return tc;
         }
