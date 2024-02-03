@@ -17,5 +17,12 @@ namespace TMdllB.Query
 
             return mc;
         }
+
+        public static TVResultContainer ParseTVResults(string json)
+        {
+            TVResultContainer tc = JsonSerializer.Deserialize<TVResultContainer>(json, _serializeOptions);
+
+            return tc;
+        }
     }
 }
