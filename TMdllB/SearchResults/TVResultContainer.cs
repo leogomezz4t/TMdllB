@@ -10,7 +10,7 @@ namespace TMdllB.SearchResults
         /*
          *  A list of type TVResult that represents the results returned
          */
-        [JsonPropertyName("result")]
-        public List<TVResult> Results { get; }
+        [JsonPropertyName("results")]
+        public List<TVResult> Results { get; set; }
     }
 }
