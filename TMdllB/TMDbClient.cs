@@ -50,7 +50,7 @@ namespace TMdllB
             // Url encode the params
             string encodedQuery = HttpUtility.UrlEncode(query);
             // construct the url
-            string url = $"{API_BASE_URL}{API_SEARCH}{API_MOVIES}?api_key={API_KEY}&query={encodedQuery}";
+            string url = $"{API_BASE_URL}{API_SEARCH}{API_TV_SERIES}?api_key={API_KEY}&query={encodedQuery}";
             // get the json in a string
             string jsonResult = await QueryAPI.GetString(url);
             // Serialize the string
