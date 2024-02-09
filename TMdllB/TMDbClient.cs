@@ -1,9 +1,11 @@
 ﻿using System.Web;
+using TMdllB.Query;
+using TMdllB.SearchResults;
 
 namespace TMdllB
 {
     // **** Constants
-    
+
 
     public class TMDbClient
     {
@@ -27,7 +29,7 @@ namespace TMdllB
         private string API_KEY;
 
         // **** Methods
-        public async Task<List<Movie>> SearchMovies(string query)
+        public async Task<MovieResultContainer> SearchMovies(string query)
         {
             // Url Encode the get params
             string encodedQuery = HttpUtility.UrlEncode(query);
@@ -38,9 +40,23 @@ namespace TMdllB
             // Serialize the jsonResult
             MovieResultContainer container = QueryParser.ParseMovieResults(jsonResult);
             // Convert all results to a Movie
-            List<Movie> movies = container.Results.Select(x => new Movie(x, this)).ToList();
+            //List<Movie> movies = container.Results.Select(x => new Movie(x, this)).ToList();
 
-            return movies;
+            return container;
+        }
+
+        public async Task<TVResultContainer> SearchTV(string query)
+        {
+            // Url encode the params
+            string encodedQuery = HttpUtility.UrlEncode(query);
+            // construct the url
+            string url = $"{API_BASE_URL}{API_SEARCH}{API_TV_SERIES}?api_key={API_KEY}&query={encodedQuery}";
+            // get the json in a string
+            string jsonResult = await QueryAPI.GetString(url);
+            // Serialize the string
+            TVResultContainer container = QueryParser.ParseTVResults(jsonResult);
+
+            return container;
         }
     }
 }

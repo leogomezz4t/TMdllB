@@ -1,4 +1,6 @@
-﻿namespace TMdllB
+﻿using TMdllB.SearchResults;
+
+namespace TMdllB
 {
     public class Movie
     {
@@ -46,7 +48,9 @@
 
         public string RelativeBackdropPath { get; }
 
-        public string BackdropPath { get
+        public string BackdropPath
+        {
+            get
             {
                 return $"{TMDbClient.IMAGE_BASE_URL}{TMDbClient.IMAGE_ORIGINAL_SIZE_ENDPOINT}{RelativeBackdropPath}";
             }
@@ -62,7 +66,9 @@
 
         public string RelativePosterPath { get; }
 
-        public string PosterPath { get
+        public string PosterPath
+        {
+            get
             {
                 return $"{TMDbClient.IMAGE_BASE_URL}{TMDbClient.IMAGE_ORIGINAL_SIZE_ENDPOINT}{RelativePosterPath}";
             }
