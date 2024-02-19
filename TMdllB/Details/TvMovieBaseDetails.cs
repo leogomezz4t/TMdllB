@@ -29,7 +29,7 @@ namespace TMdllB.Details
         public string Homepage { get; set; }
 
         [JsonPropertyName("id")]
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [JsonPropertyName("original_language")]
         public string OriginalLanguage { get; set; }
