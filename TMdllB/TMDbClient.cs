@@ -76,5 +76,16 @@ namespace TMdllB
 
             return md;
         }
+
+        public async Task<TVDetails> GetTVDetails(int id)
+        {
+            // No need to encode id
+            string url = $"{API_BASE_URL}{API_TV_SERIES}/{id}?api_key={API_KEY}";
+            string jsonResult = await QueryAPI.GetString(url);
+            // serialize into a detail object
+            TVDetails td = QueryParser.ParseTVDetails(jsonResult);
+
+            return td;
+        }
     }
 }
