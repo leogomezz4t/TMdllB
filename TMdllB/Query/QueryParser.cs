@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using TMdllB.Details;
 using TMdllB.SearchResults;
 
 namespace TMdllB.Query
@@ -29,6 +30,16 @@ namespace TMdllB.Query
             if (tc == null) throw new Exception($"Failed to deserialize the input: {json}");
 
             return tc;
+        }
+
+        public static MovieDetails ParseMovieDetails(string json)
+        {
+            MovieDetails? md = JsonSerializer.Deserialize<MovieDetails>(json, _serializeOptions);
+
+            // Check null
+            if (md == null) throw new Exception($"Failed to deserialize the input: {json}");
+
+            return md;
         }
     }
 }
