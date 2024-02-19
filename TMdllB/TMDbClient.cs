@@ -1,6 +1,7 @@
 ﻿using System.Web;
 using TMdllB.Query;
 using TMdllB.SearchResults;
+using TMdllB.Details;
 
 namespace TMdllB
 {
@@ -57,6 +58,17 @@ namespace TMdllB
             TVResultContainer container = QueryParser.ParseTVResults(jsonResult);
 
             return container;
+        }
+
+        public async Task<MovieDetails> GetMovieDetails(string id)
+        {
+            // No need to encode the id. Assuming it is an int representation in proper form
+            string url = $"{API_BASE_URL}{API_MOVIES}/{id}?api_key={API_KEY}";
+            string jsonResult = await QueryAPI.GetString(url);
+            // serialize into a detail object
+            MovieDetails md = QueryParser.ParseMovieDetails(jsonResult);
+
+            return md;
         }
     }
 }
