@@ -66,7 +66,7 @@ namespace TMdllB
             return container;
         }
 
-        public async Task<MovieDetails> GetMovieDetails(string id)
+        public async Task<MovieDetails> GetMovieDetails(int id)
         {
             // No need to encode the id. Assuming it is an int representation in proper form
             string url = $"{API_BASE_URL}{API_MOVIES}/{id}?api_key={API_KEY}";
