@@ -2,7 +2,7 @@
 
 namespace TMdllB.Objects
 {
-    public class CreatedBy
+    public class Creator
     {
         [JsonPropertyName("id")]
         public int Id { get; set; }
