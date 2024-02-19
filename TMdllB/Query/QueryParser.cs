@@ -41,5 +41,15 @@ namespace TMdllB.Query
 
             return md;
         }
+
+        public static TVDetails ParseTVDetails(string json)
+        {
+            TVDetails? td = JsonSerializer.Deserialize<TVDetails>(json, _serializeOptions);
+
+            // Check null
+            if (td == null) throw new Exception($"Failed to deserialize the input: {json}");
+
+            return td;
+        }
     }
 }
