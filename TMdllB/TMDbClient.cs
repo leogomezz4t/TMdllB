@@ -29,6 +29,12 @@ namespace TMdllB
 
         private string API_KEY;
 
+        // **** Internal Methods
+        internal static string GetOriginalImageUrl(string relPath)
+        {
+            return $"{IMAGE_BASE_URL}{IMAGE_ORIGINAL_SIZE_ENDPOINT}{relPath}";
+        }
+
         // **** Methods
         public async Task<MovieResultContainer> SearchMovies(string query)
         {
