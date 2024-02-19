@@ -4,7 +4,7 @@ using TMdllB.Objects;
 
 namespace TMdllB.Details
 {
-    public class TvDetails
+    public class TVDetails
     {
         [JsonPropertyName("created_by")]
         public Creator[] CreatedBy { get; set; }
@@ -15,7 +15,7 @@ namespace TMdllB.Details
         [JsonPropertyName("first_air_date")]
         public DateOnly FirstAirDate { get; set; }
 
-        [JsonPropertyName("in_production")
+        [JsonPropertyName("in_production")]
         public bool InProduction { get; set; }
 
         [JsonPropertyName("languages")]
@@ -25,7 +25,7 @@ namespace TMdllB.Details
         public DateOnly LastAirDate { get; set; }
 
         [JsonPropertyName("last_episode_to_air")]
-        public Episode LastEpisodeToAir { get; set; }
+        public Episode? LastEpisodeToAir { get; set; }
 
         [JsonPropertyName("name")]
         public string Name { get; set; }
@@ -33,6 +33,25 @@ namespace TMdllB.Details
         [JsonPropertyName("next_episode_to_air")]
         public Episode? NextEpisodeToAir { get; set; }
 
+        [JsonPropertyName("networks")]
+        public Network[] Networks { get; set; }
 
+        [JsonPropertyName("number_of_episodes")]
+        public int NumberOfEpisodes { get; set; }
+
+        [JsonPropertyName("number_of_seasons")]
+        public int NumberOfSeasons { get; set; }
+
+        [JsonPropertyName("origin_country")]
+        public string[] OriginCountries { get; set; }
+
+        [JsonPropertyName("original_name")]
+        public string OriginalName { get; set; }
+
+        [JsonPropertyName("seasons")]
+        public Season[] Seasons { get; set; }
+
+        [JsonPropertyName("type")]
+        public string Type { get; set; }
     }
 }
