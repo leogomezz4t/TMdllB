@@ -4,7 +4,7 @@ using TMdllB.Objects;
 
 namespace TMdllB.Details
 {
-    public class TVDetails
+    public class TVDetails : TvMovieBaseDetails
     {
         [JsonPropertyName("created_by")]
         public Creator[] CreatedBy { get; set; }
