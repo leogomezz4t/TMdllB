@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using TMdllB.Details;
+using TMdllB.Exceptions;
 using TMdllB.SearchResults;
 
 namespace TMdllB.Query
@@ -27,7 +28,7 @@ namespace TMdllB.Query
             TVResultContainer? tc = JsonSerializer.Deserialize<TVResultContainer>(json, _serializeOptions);
 
             // check for null
-            if (tc == null) throw new Exception($"Failed to deserialize the input: {json}");
+            if (tc == null) throw new DeserializationFailureException(json);
 
             return tc;
         }
@@ -37,7 +38,7 @@ namespace TMdllB.Query
             MovieDetails? md = JsonSerializer.Deserialize<MovieDetails>(json, _serializeOptions);
 
             // Check null
-            if (md == null) throw new Exception($"Failed to deserialize the input: {json}");
+            if (md == null) throw new DeserializationFailureException(json);
 
             return md;
         }
@@ -47,7 +48,7 @@ namespace TMdllB.Query
             TVDetails? td = JsonSerializer.Deserialize<TVDetails>(json, _serializeOptions);
 
             // Check null
-            if (td == null) throw new Exception($"Failed to deserialize the input: {json}");
+            if (td == null) throw new DeserializationFailureException(json);
 
             return td;
         }
