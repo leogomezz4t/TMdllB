@@ -2,6 +2,8 @@
 using TMdllB.Query;
 using TMdllB.SearchResults;
 using TMdllB.Details;
+using TMdllB.Objects;
+using System.Runtime.CompilerServices;
 
 namespace TMdllB
 {
@@ -24,6 +26,8 @@ namespace TMdllB
         internal static string API_SEARCH = "/search";
         internal static string API_MOVIES = "/movie";
         internal static string API_TV_SERIES = "/tv";
+
+        internal static string API_ALTERNATIVE_TITLES = "/alternative_titles";
 
         // **** Properties
 
@@ -86,6 +90,26 @@ namespace TMdllB
             TVDetails td = QueryParser.ParseTVDetails(jsonResult);
 
             return td;
+        }
+
+        public async Task<AlternativeTitles> GetMovieAlternativeTitles(int movieId, string country)
+        {
+            string url = $"{API_BASE_URL}{API_MOVIES}/{movieId}{API_ALTERNATIVE_TITLES}?api_key={API_KEY}&country={country}";
+            string jsonResult = await QueryAPI.GetString(url);
+
+            AlternativeTitles at = QueryParser.ParseAlternativeTitles(jsonResult);
+
+            return at;
+        }
+
+        public async Task<AlternativeTitles> GetMovieAlternativeTitles(int movieId)
+        {
+            string url = $"{API_BASE_URL}{API_MOVIES}/{movieId}{API_ALTERNATIVE_TITLES}?api_key={API_KEY}";
+            string jsonResult = await QueryAPI.GetString(url);
+            
+            AlternativeTitles at = QueryParser.ParseAlternativeTitles(jsonResult);
+
+            return at;
         }
     }
 }
