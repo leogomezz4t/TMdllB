@@ -1,6 +1,7 @@
 ﻿using System.Text.Json;
 using TMdllB.Details;
 using TMdllB.Exceptions;
+using TMdllB.Objects;
 using TMdllB.SearchResults;
 
 namespace TMdllB.Query
@@ -51,6 +52,15 @@ namespace TMdllB.Query
             if (td == null) throw new DeserializationFailureException(json);
 
             return td;
+        }
+
+        public static AlternativeTitles ParseAlternativeTitles(string json)
+        {
+            AlternativeTitles? at = JsonSerializer.Deserialize<AlternativeTitles>(json, _serializeOptions);
+
+            if (at == null) throw new DeserializationFailureException(json);
+
+            return at;
         }
     }
 }
