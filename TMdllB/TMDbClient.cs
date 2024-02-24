@@ -111,5 +111,15 @@ namespace TMdllB
 
             return at;
         }
+
+        public async Task<AlternativeTitles> GetTVAlternativeTitles(int tvId)
+        {
+            string url = $"{API_BASE_URL}{API_TV_SERIES}/{tvId}{API_ALTERNATIVE_TITLES}?api_key={API_KEY}";
+            string jsonResult = await QueryAPI.GetString(url);
+
+            AlternativeTitles at = QueryParser.ParseAlternativeTitles(jsonResult);
+
+            return at;
+        }
     }
 }
